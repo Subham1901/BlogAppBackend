@@ -9,7 +9,7 @@ const usersRouter = require("./Routers/userRoutes");
 require("dotenv").config();
 const cors = require("cors");
 const { log } = require("console");
-const port = process.env.PORT || 8000;
+
 //!Express Usage
 app.use(
   cors({
@@ -37,6 +37,6 @@ app.use((err, req, res, next) => {
   });
 });
 
-app.listen(port, () => {
+app.listen(process.env.PORT || 3030, () => {
   console.log("Sever Started.. ");
 });
